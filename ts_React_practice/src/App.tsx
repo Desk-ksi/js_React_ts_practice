@@ -1,4 +1,6 @@
 import { useState } from "react";
+import CounterButton from "./components/CounterButton";
+import './App.css'
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -17,11 +19,11 @@ export default function App() {
 
   return(
     <div>
-      <h1>カウンター</h1>
-      <p>{count}</p>
-      <button onClick={down}>カウントダウン</button>
-      <button onClick={up}>カウントアップ</button>
-      <button onClick={reset}>リセット</button>
+      <h3 className="midasi">カウンター</h3>
+      <p className="sample-3">{count}</p>
+      <CounterButton onClick={down} label="カウントダウン" />
+      <CounterButton onClick={up} label="カウントアップ" />
+      <CounterButton onClick={reset} label="リセット" />
     </div>
   );
 }
